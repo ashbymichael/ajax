@@ -6,7 +6,7 @@ $(document).ready(function() {
     $.ajax({
       url: targetUrl
     }).done(function(res) {
-      console.log(res);
+      $('#content').html(res);
     })
   })
 });
