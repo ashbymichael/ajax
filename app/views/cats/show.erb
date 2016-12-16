@@ -1,0 +1,21 @@
+<div>
+  <a href="/cats/random">
+    <button id="cat-button" class="action-button">show me another cat!</button>
+  </a>
+</div>
+
+<div>
+  <img src="/<%= @cat.img %>" />
+</div>
+
+<div>
+  <%= erb :'/partials/_comment_form', locals: {animal: @cat} %>
+</div>
+
+<div>
+  <ul>
+    <% @cat.comments.each do |comment| %>
+      <li><%= comment.body %></li>
+    <% end %>
+  </ul>
+</div>

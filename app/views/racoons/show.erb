@@ -1,0 +1,21 @@
+<div>
+  <a href="/racoons/random">
+    <button id="racoon-button" class="action-button">show me another racoon!</button>
+  </a>
+</div>
+
+<div>
+  <img src="/<%= @racoon.img %>" />
+</div>
+
+<div>
+  <%= erb :'/partials/_comment_form', locals: {animal: @racoon} %>
+</div>
+
+<div>
+  <ul>
+    <% @racoon.comments.each do |comment| %>
+      <li><%= comment.body %></li>
+    <% end %>
+  </ul>
+</div>

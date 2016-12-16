@@ -1,0 +1,13 @@
+<form
+  id="comment-form"
+  action="/<%= animal.class.to_s.downcase %>s/<%= animal.id %>/comments"
+  method="POST"
+>
+  <input
+    type="text"
+    name="body"
+    autofocus="true"
+    placeholder="put your comment here!"
+  />
+  <input type="submit" value="post comment" />
+</form>
