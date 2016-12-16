@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.action-button').on('click', function(e) {
+  $('#content').on('click', '.action-button', function(e) {
     e.preventDefault();
     var targetUrl = $(e.target).closest('a').attr('href');
 
