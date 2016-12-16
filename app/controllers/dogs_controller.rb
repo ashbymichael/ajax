@@ -1,9 +1,11 @@
 get '/dogs/random' do
-  p '^v' * 25
-  p 'correct route hit'
-  p '^v' * 25
-  # dog_id = Dog.all.sample.id
-  # redirect "dogs/#{dog_id}"
+  dog_id = Dog.all.sample.id
+  if request.xhr?
+    @dog = Dog.find(dog_id)
+    erb :'dogs/show', layout: false
+  else
+    redirect "dogs/#{dog_id}"
+  end
 end
 
 get '/dogs/:id' do
