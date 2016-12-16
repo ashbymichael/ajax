@@ -1,6 +1,9 @@
 get '/racoons/random' do
-  racoon_id = Racoon.all.sample.id
-  redirect "racoons/#{racoon_id}"
+  p '^v' * 25
+  p 'correct route hit'
+  p '^v' * 25
+  # racoon_id = Racoon.all.sample.id
+  # redirect "racoons/#{racoon_id}"
 end
 
 get '/racoons/:id' do

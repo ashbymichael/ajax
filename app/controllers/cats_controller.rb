@@ -1,6 +1,9 @@
 get '/cats/random' do
-  cat_id = Cat.all.sample.id
-  redirect "cats/#{cat_id}"
+  p '^v' * 25
+  p 'correct route hit'
+  p '^v' * 25
+  # cat_id = Cat.all.sample.id
+  # redirect "cats/#{cat_id}"
 end
 
 get '/cats/:id' do
