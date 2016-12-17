@@ -12,7 +12,8 @@ $(document).ready(function() {
 
   $('#content').on('submit', '.comment-form', function(e) {
     e.preventDefault();
-    var newComment = $(e.target).children('input').first().val();
+    var commentField = $(e.target).children('input').first();
+    var newComment = commentField.val();
     var targetUrl = $(e.target).attr('action');
 
     $.ajax({
@@ -20,7 +21,8 @@ $(document).ready(function() {
       method: 'POST',
       data: {body: newComment}
     }).done(function(res) {
-      console.log(res);
+      commentField.val('');
+      $('.comment-list').first().prepend(res);
     })
 
   })
