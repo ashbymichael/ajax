@@ -1,4 +1,8 @@
 post '/dogs/:id/comments' do
+  p '^v' * 25
+  p 'CORRECT ROUTE!!!!!!!'
+  p params
+  p '^v' * 25
   @dog = Dog.find(params[:id])
   @comment = @dog.comments.new(body: params[:body])
 
@@ -10,6 +14,10 @@ post '/dogs/:id/comments' do
 end
 
 post '/cats/:id/comments' do
+  p '^v' * 25
+  p 'CORRECT ROUTE!!!!!!!'
+  p params
+  p '^v' * 25
   @cat = Cat.find(params[:id])
   @comment = @cat.comments.new(body: params[:body])
 
@@ -21,6 +29,10 @@ post '/cats/:id/comments' do
 end
 
 post '/racoons/:id/comments' do
+  p '^v' * 25
+  p 'CORRECT ROUTE!!!!!!!'
+  p params
+  p '^v' * 25
   @racoon = Racoon.find(params[:id])
   @comment = @racoon.comments.new(body: params[:body])
 
