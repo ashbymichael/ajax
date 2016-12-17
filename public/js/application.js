@@ -19,6 +19,8 @@ $(document).ready(function() {
       url: targetUrl,
       method: 'POST',
       data: {body: newComment}
+    }).done(function(res) {
+      console.log(res);
     })
 
   })
